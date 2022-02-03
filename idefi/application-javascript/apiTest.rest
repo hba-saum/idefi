@@ -1,0 +1,92 @@
+GET http://localhost:3000/
+
+
+### send deposit by depositors 1
+POST http://localhost:3000/depositMoney
+content-type: application/json
+
+{
+    "accNo" : "123456", 
+    "businessId": "1", 
+    "amount" : "60000", 
+    "share" : "80"
+}
+
+
+### send deposit by depositors 2
+POST http://localhost:3000/depositMoney
+content-type: application/json
+
+{
+    "accNo" : "012345", 
+    "businessId": "1", 
+    "amount" : "50000", 
+    "share" : "70"
+}
+
+### send deposit by depositors 3
+POST http://localhost:3000/depositMoney
+content-type: application/json
+
+{
+    "accNo" : "012346", 
+    "businessId": "1", 
+    "amount" : "40000", 
+    "share" : "60"
+}
+
+
+### total of all the deposited money
+GET http://localhost:3000/totalDeposit/1
+
+
+### invest in the business
+POST http://localhost:3000/investToBusiness
+content-type: application/json
+
+{
+    "businessId": "1"
+}
+
+
+### make all depositors Invested: 'yes'
+
+POST http://localhost:3000/InvestedTrue
+content-type: application/json
+
+{
+    "businessId": "1"
+}
+
+
+### business returns the profit to the bank
+POST http://localhost:3000/BusinessReturnsProfit
+content-type: application/json
+
+{
+    "businessId": "1", 
+    "amount" : "250000"
+}
+
+### ProfitReturned true
+
+POST http://localhost:3000/BusinessReturnsProfitTrue
+content-type: application/json
+
+{
+    "businessId": "1"
+}
+
+
+### Return Deposit
+
+POST http://localhost:3000/returnDeposit
+content-type: application/json
+
+{
+    "businessId": "1",
+    "invested": "150000",
+    "returned": "250000"
+}
+
+

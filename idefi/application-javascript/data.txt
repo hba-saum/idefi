@@ -1,0 +1,18 @@
+    "accNo" : "123400", 
+    "businessId": "1", 
+    "amount" : "40000", 
+    "share" : "60"
+
+    "accNo" : "012345", 
+    "businessId": "1", 
+    "amount" : "50000", 
+    "share" : "60"
+
+    "accNo" : "12345", 
+    "businessId": "1", 
+    "amount" : "60000", 
+    "share" : "60"
+
+
+
+////
